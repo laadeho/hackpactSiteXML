@@ -13,7 +13,7 @@ $(document).ready(function() {
 	// Hacemos una peticion via ajax
 	$.ajax({
 		type: "GET",
-		url: "eduardo_obieta_b.xml",
+		url: "eduardo_obieta.xml",
 		dataType: "xml",
 		success: function(xml) {
 
@@ -21,12 +21,16 @@ $(document).ready(function() {
 			console.log(xml);
 
 			$(xml).find("hackpact hp").each(function() {
-				var numero = $(this).find("number").text();
-
 				// Creamos la etiqueta cont
 				var contNode = document.createElement("cont");
-				$(contNode).html(numero);
-
+				// otras variables
+				var numero = $(this).find("number").text();
+				var codigo = $(this).find("code").text();
+				var liga = $(this).find("link").text();
+				var invitado = $(this).find("invite").text();
+				
+				$(contNode).html('<div id=hp'+numero+'><table width="800" border="0"><tr><td>&nbsp;</td><td align="left"><h2>Día '+numero+'</h2><p>invitado '+invitado+'</p></td></tr><tr><td width="150" valign="top"><p><audio controls><source src="'+liga+'" type=audio/mpeg>Your browser does not support the audio element.</audio></td><td width="600"><p>'+codigo+'</p><p>'+liga+'</p></td></tr></table></div></br>');
+				
 				// Agregamos contNode a contenido
 				$(".contenido").append(contNode);
 				

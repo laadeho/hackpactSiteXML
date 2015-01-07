@@ -4,49 +4,49 @@
    <hp>
       <number>04</number>
       <code>
-      		/* &lt;br /&gt;
-			Eduardo H Obieta &lt;br /&gt;
-			Hackpact 04 2015 &lt;br /&gt;
-			*/ &lt;br /&gt;
-			s.boot;&lt;br /&gt;
-			s.prepareForRecord;&lt;br /&gt;
-			s.record;&lt;br /&gt;
-			(&lt;br /&gt;
-			SynthDef("hp04", {|freq1 = 70, freq2 = 150, mul= 0.8, out = 0, amp = 0.7, dura = 0.5|&lt;br /&gt;
-			var sig = Pan2.ar(SyncSaw.ar(freq1, freq2, mul),out);&lt;br /&gt;
-			var env = EnvGen.ar(Env.perc(0.01,dura,amp,-4),1, doneAction:2);&lt;br /&gt;
-			Out.ar(out, sig*env)&lt;br /&gt;
-			}).add&lt;br /&gt;
-			)&lt;br /&gt;
-			(&lt;br /&gt;
-			var frecuencias;&lt;br /&gt;
-			frecuencias = Routine({&lt;br /&gt;
-			inf.do({&lt;br /&gt;
-			60.yield;&lt;br /&gt;
-			63.yield;&lt;br /&gt;
-			67.yield;&lt;br /&gt;
-			70.yield;&lt;br /&gt;
-			72.yield;&lt;br /&gt;
-			if (0.25.coin, {&lt;br /&gt;
-			66.yield;&lt;br /&gt;
-			69.yield;&lt;br /&gt;
-			73.yield;&lt;br /&gt;
-			76.yield;&lt;br /&gt;
-			([63,64,65].choose).yield;&lt;br /&gt;
-			})&lt;br /&gt;
-			})&lt;br /&gt;
-			});&lt;br /&gt;
-			r = Routine({&lt;br /&gt;
-			inf.do({&lt;br /&gt;
-			Synth(&lt;br /&gt;
-			\hp04,&lt;br /&gt;
-			[\freq1, frecuencias.next.midicps, \pan, 1.0.rand2, \amp, exprand(0.5,0.75), \dura, [0.05,0.2,0.25].choose]&lt;br /&gt;
-			);&lt;br /&gt;
-			exprand(0.025,0.5).wait&lt;br /&gt;
-			})&lt;br /&gt;
-			}).play&lt;br /&gt;
-			)&lt;br /&gt;
-			s.stopRecording;&lt;br /&gt;
+      		/* 
+			Eduardo H Obieta 
+			Hackpact 04 2015 
+			*/ 
+			s.boot;
+			s.prepareForRecord;
+			s.record;
+			(
+			SynthDef("hp04", {|freq1 = 70, freq2 = 150, mul= 0.8, out = 0, amp = 0.7, dura = 0.5|
+			var sig = Pan2.ar(SyncSaw.ar(freq1, freq2, mul),out);
+			var env = EnvGen.ar(Env.perc(0.01,dura,amp,-4),1, doneAction:2);
+			Out.ar(out, sig*env)
+			}).add
+			)
+			(
+			var frecuencias;
+			frecuencias = Routine({
+			inf.do({
+			60.yield;
+			63.yield;
+			67.yield;
+			70.yield;
+			72.yield;
+			if (0.25.coin, {
+			66.yield;
+			69.yield;
+			73.yield;
+			76.yield;
+			([63,64,65].choose).yield;
+			})
+			})
+			});
+			r = Routine({
+			inf.do({
+			Synth(
+			\hp04,
+			[\freq1, frecuencias.next.midicps, \pan, 1.0.rand2, \amp, exprand(0.5,0.75), \dura, [0.05,0.2,0.25].choose]
+			);
+			exprand(0.025,0.5).wait
+			})
+			}).play
+			)
+			s.stopRecording;
 		</code>
       <link>eho/04_15.04.mp3</link>
       <invite>ernesto_romero</invite>
