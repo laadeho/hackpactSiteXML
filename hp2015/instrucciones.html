@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Hackpact, 2015, LAAd, Eduardo H Obieta, eho, SuperCollider, Fabrizio Durant, Rodrigo Guzman" />
+<title>Hackpact 2015 SuperCollider.</title>
+<style type="text/css">
+body,td,th {
+	color: #999;
+	font-family: Verdana;
+	font-size: 11px;
+}
+body {
+	background-color: #000;
+}
+h1 {
+	font-size: 16px;
+	color: #FFF;
+}
+h2 {
+	font-size: 14px;
+	color: #CCC;
+}
+a:link {
+	color: #666;
+	text-decoration: none;
+}
+a:visited {
+	color: #666;
+	text-decoration: none;
+}
+a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+a:active {
+	color: #666;
+	text-decoration: none;
+}
+h3 {
+	color: #FFF;
+}
+</style>
+</head>
+<table width="100%" border="0">
+  <tr>
+    <td align="right"><div id = "up"></div>
+      <p>&nbsp;</p>
+      <table width="800" border="0" align="center">
+      <tr>
+        <td width="150" align="right" valign="top">&nbsp;</td>
+        <td width="650" align="right" valign="middle"><h1><a href="../hackpact2015.html" target="_self">HACKPACT 2015</a></h1>
+          <h2>SuperCollider</h2></td>
+        </tr>
+        <tr>
+        <td width="150" align="right" valign="middle"><p>&nbsp;</p></td>
+        <td width="650" align="right" valign="middle"><p><a href="../hackpact2015.html#que">que es?</a> | <a href="../hackpact2015.html#par">participantes</a> | <a href="instrucciones.html" target="_self">instrucciones</a> | <a href="../hackpact2015.html#otr">otros hackpact</a></p>
+          <hr size="1" /></td>
+        </tr>
+      <tr>
+        <td width="150">
+          </td>
+        <td width="650"></td>
+      </tr>
+      <tr>
+        <td valign="top"><p>&nbsp;</p>
+          <p><strong>instrucciones:</strong></p></td>
+        <td>
+        <div id = ins>
+          <p>&nbsp;</p>
+          <p><strong>1.</strong> Genera tu código en SuperCollider<br />
+            <strong>2.</strong> Graba tu ejercicio usando tu software preferido o bien usando el siguiente código:</p>
+          <blockquote>
+            <p>s.prepareForRecord;<br />
+              s.record; //observa en que carpeta se hace la grabación </p>
+            <blockquote>
+              <p><em>/User/username/Music/SuperCollider Recordings/nameofFile.aiff</em> -&gt; mac<br />
+                <em>\Users\username\Documents\SuperCollider\Recordings\nameofFile.aiff </em>-&gt; win</p>
+            </blockquote>
+            <p>              //Código a grabar aquí, evaluando conforme quieras grabar</p>
+            <p>              s.stopRecording;</p>
+            </blockquote>
+          <p><strong>3.</strong> En caso de que quieras que tu propuesta aparezca en este sitio, envía tu código a este  <a href="mailto:hackpact2015@gmail.com" target="_self"><img src="e-correo.png" width="50" height="18" /></a> con la siguiente estructura en formato *.xml:</p>
+          <p><em>Puede ser editado con Bloc de Notas, TextEdit, SublimeText, Word o cualquier otro editor de texto.</em></p>
+          <p><strong>3.1</strong>. Primero que nada el nombre del archivo: <a href="hp15_eho.zip" target="_new"></a><em></em></p>
+          <blockquote>
+            <p><strong>&quot;<em>eduardo_obieta</em>.xml&quot;</strong> -&gt; en donde &quot;<strong><em>eduardo_obieta</em></strong>&quot; será el nombre y apellido para tenerlo como usuario.</p>
+            </blockquote>
+          <p><strong>3.2.</strong> <a href="hp15_eho.zip" target="_new"><em>descargar muestra xml</em></a></p>
+          <blockquote>
+            <table width="100%" border="0" align="center">
+              <tr>
+                <td><hr size="1" />
+                  <p>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br />
+                    &lt;hackpact&gt;</p>
+                  <blockquote>
+                    <p>&lt;name&gt;eduardo_obieta&lt;/name&gt; <em>//su nombre de usuario, con guión bajo y minúsculas</em><br />                      
+                      &lt;hp&gt; //iniciar hackpact<br />
+                      </p>
+                    <blockquote>
+                      <p>&lt;number&gt;02&lt;/number&gt; <em>//número de hackpact</em> de mayor a menor<br />
+                        &lt;code&gt; <em>//acá va su código</em><br />
+                        </p>
+                      <blockquote>
+                        <p>/*<br />
+                          Eduardo H Obieta<br />
+                          Hackpact 02 2015<br />
+                          */<br />
+                          s.boot;<br />
+                          s.prepareForRecord;<br />
+                          s.record;<br />
+                          a={SinOsc.ar(880)}.play;<br />
+                          a.free;<br />
+                          s.stopRecording;<br />
+                          </p>
+                        </blockquote>
+                      <p>&lt;/code&gt;<br />
+                        &lt;link&gt;www.laad.com.mx/hp2015/eho/02_15.02.mp3&lt;/link&gt; <em>//liga en la cual se encuentra su archivo de audio, de preferencia en formato mp3</em><br />
+                        &lt;invite&gt;nombre_apellido&lt;/invite&gt; <em>//persona a la que invitaron en este hackpact, es importante el guión bajo</em> y minúsculas</p>
+                    </blockquote>
+                    <p>&lt;/hp&gt; //terminar hackpact</p>
+                  </blockquote>
+<blockquote>
+  <p>&lt;hp&gt; //iniciar hackpact</p>
+                    <blockquote>
+                      <p>&lt;number&gt;01&lt;/number&gt; <em>//número de hackpact</em><br />
+                        &lt;code&gt; <em>//acá va su código</em><br />
+                      </p>
+                      <blockquote>
+                        <p>/*<br />
+                          Eduardo H Obieta<br />
+                          Hackpact 01 2015<br />
+                          */<br />
+                          s.boot;<br />
+                          s.prepareForRecord;<br />
+                          s.record;<br />
+                          a={SinOsc.ar(440)}.play;<br />
+                          a.free;<br />
+                          s.stopRecording;<br />
+                        </p>
+                      </blockquote>
+                      <p>&lt;/code&gt;<br />
+                        &lt;link&gt;www.laad.com.mx/hp2015/eho/01_15.01.mp3&lt;/link&gt; <em>//liga en la cual se encuentra su archivo de audio, de preferencia en formato mp3</em><br />
+                        &lt;invite&gt;nombre_apellido&lt;/invite&gt; <em>//persona a la que invitaron en este hackpact, es importante el guión bajo</em> y minúsculas</p>
+                    </blockquote>
+                    <p>&lt;/hp&gt; //terminar hackpact<br />
+                      </p>
+                    <p>&lt;bio&gt; //iniciar bio</p>
+                    <blockquote>
+                      <p>&lt;bioCont&gt; //En caso de que deseen tener una sección con breve biografía o algo del estilo, puede ir aquí.</p>
+                      <p>Arquitecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus nec nisi finibus scelerisque. Duis vel nunc risus. Aenean et nulla sed nisl aliquam cursus. Curabitur ac lacus elementum, molestie justo ullamcorper, suscipit eros. Donec ut dapibus purus, et consectetur mauris. Proin luctus rhoncus purus, ac tincidunt sem vulputate nec. Nullam non turpis euismod, malesuada magna a, ullamcorper arcu. Aliquam condimentum at sapien venenatis mattis. Vivamus viverra pulvinar ante quis fringilla. Cras eget vestibulum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec in nisl pretium, finibus nibh ut, rhoncus urna. Aliquam erat volutpat. Sed molestie, turpis a fermentum sodales, lorem nibh elementum diam, at auctor tellus est non nunc. Integer dapibus odio non feugiat pulvinar. Donec quis mattis nibh.&lt;/bioCont&gt;<br />
+                      </p>
+</blockquote>
+                    <p>&lt;/bio&gt; //terminar bio<br />
+                      </p>
+                </blockquote>
+                  <p>&lt;/hackpact&gt; //finaliza el código</p>
+                  <p>&nbsp;</p>
+                  <hr size="1" />
+                  <p><strong><em>** IMPORTANTE:</em></strong> Los 15 ejercicios que cada usuario haga podrán quedar en el mismo archivo &quot;<em><strong>hp2015_usr.xml</strong>&quot;</em>, no importando si lo envían 15 veces al mail, cada nueva copia remplazará a la anterior.</p>
+                  <p>&nbsp;</p>
+                  <p>Con la información que nos proporcionen y con ayuda de este formato *.xml, se pretende generar un website del proyecto como en las siguientes imágenes:</p></td>
+                </tr>
+              <tr>
+                <td><blockquote>&nbsp;</blockquote></td>
+              </tr>
+            </table>
+          </blockquote>
+          <p>intro:</p>
+          <p><img src="esquema/e01.png" width="800" height="400" /></p>
+          <p>&nbsp;</p>
+          <p>primer click:</p>
+          <p><img src="esquema/e02.png" width="800" height="400" /></p>
+          <p>al seleccionar un participante:</p>
+          <p><img src="esquema/e03.png" width="800" height="400" /></p>
+          <p>al dar click en &quot;códigos&quot;:</p>
+          <p><img src="esquema/e04.png" width="800" height="400" /></p>
+          <p>&nbsp;</p>
+          <table width="100%" border="0">
+            <tr>
+              <td align="right"><a href="#up">up</a></td>
+            </tr>
+          </table>
+        </div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td align="right">&nbsp;</td>
+      </tr>
+      </table>
+      <hr size="1" />
+      <table width="100%" border="0">
+        <tr>
+          <td align="right" valign="bottom">hackpact 2015. website by <a href="http://eho.laad.com.mx" target="_blank">Eduardo H Obieta</a> and Diego Montesinos [at] <a href="http://laad.com.mx" target="_blank">laad</a></td>
+          <td width="50">&nbsp;</td>
+          <td width="185"><img src="logo.png" width="181" height="120" /></td>
+        </tr>
+      </table>
+    <p>&nbsp;</p></td>
+  </tr>
+</table>
+</body>
+</html>

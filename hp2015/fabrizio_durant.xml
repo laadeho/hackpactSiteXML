@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hackpact>
+	<name>Fabrizio Durant</name>
+	<hp> 
+		<number>02</number>
+		<code>
+			*/
+			 Fabrizio Durant
+			 Hackpact 2015
+			*/
+			s.boot; 
+			s.prepareForRecord; 
+			s.record; 
+			
+			{Blip.ar(Saw.ar(38,0.2)+LFTri.ar(32,1.2,0.5,1.0))!2;}.play; 
+			
+			( 
+			{(Pulse.ar(0.8,0.6,0.1)+SinOscFB.ar(7,0.2,1.2))!2; 
+			}.play; 
+			) 
+			
+			{Saw.ar(30)*EnvGen.kr(Env.perc(1,6,0.2))!2}.play 
+			
+			s.stopRecording;
+		</code>
+		<link>&quot;border: 0; width: 200px; height: 42px;&quot; src=&quot;https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/artwork=none/track=1453165859/transparent=true/&quot; seamless></link> 
+		<invite> </invite>
+	</hp>
+	<hp> 
+		<number>01</number>
+		<code>
+			/*
+			Fabrizio Durant
+			Hackpact 01 2015
+			*/
+			A] 
+			s.boot 
+			{(LFTri.ar([60,62,63,65,67,68,70,72].midicps,0.1,0.6)*SinOsc.kr(43,0.7,0.3)!2)*LFNoise1.kr}.play 
+			{LFTri.ar(50,0.5,0.6)*SinOsc.kr(48,0.9,0.3)!2}.play 
+			{Saw.ar(105)*EnvGen.kr(Env.perc(0.5,3))!2}.play
+			
+			B]
+			s.boot
+			{LFTri.ar(50,0.5,0.6)*SinOsc.kr(48,0.9,0.3)!2}.play 
+			{(LFTri.ar([60,62,63,65,67,68,70,72].midicps,2,0.1)*SinOsc.kr(2,0,0.7,0.6)!2)*LFNoise1.kr}.play 
+			{Saw.ar(96)*EnvGen.kr(Env.perc(0.3,8))!2}.play
+		</code>
+		<link>&quot;border: 0; width: 200px; height: 42px;&quot; src=&quot;https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/artwork=none/track=3968769040/transparent=true/&quot; seamless></link>
+		<!--
+		1453165859
+		124054011
+		<iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/track=3968769040/transparent=true/" seamless><a href="http://durant01.bandcamp.com/album/hackpact-2015">Hackpact 2015 by Durant</a></iframe>
+		<iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/track=1453165859/transparent=true/" seamless><a href="http://durant01.bandcamp.com/album/hackpact-2015">Hackpact 2015 by Durant</a></iframe>
+		-->
+		<invite>diego_madero</invite>
+	</hp>
+</hackpact>

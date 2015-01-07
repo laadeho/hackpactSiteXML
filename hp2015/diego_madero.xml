@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hackpact>
+<name>Diego Madero Islas (.dm)</name>
+<hp>
+<number>02</number> 
+<code> 
+	/*
+	Diego Madero (.dm)
+	Hackpact 02 2015
+	*/
+		(s.boot;
+			{f=Duty.kr({Drand	([0.1,0.43],inf)},0,["HPdosmilquince","#Yamecanse"].collect({|t|Dseq(t.ascii/2,inf)}));Formant.ar(f,f*19,f*50)/4}.play
+		);
+</code>
+<link>http://dm.ruido.in/files/hp2015/hp2015_dmi_02.mp3</link> 
+<invite>jorge_ramirez</invite>
+</hp>
+<hp>
+    <number>01</number>
+    <code> 
+    /*
+    .dm
+    Hackpact 01 2015
+    */
+
+(s.boot;
+SynthDef(\unoSynth, {|out= 0, freq= 440, amp= 0.1, gate= 1, detune= 0|
+        var env= EnvGen.ar(Env.perc(Rand(0.001, 0.01), LinRand(0.2, 0.4), amp, Rand(-9, -1)), doneAction:2);
+        var snd= Mix(SinOsc.ar(freq+[0, detune*0.1], env*2pi));
+        Out.ar(out, Pan2.ar(snd*env, Rand(-1, 1)));
+    }).add;
+
+    Ndef(\uno,
+        Pspawn(
+            Pbind(\method,\par,\delta,1/8,\pattern,
+                {Pbind(\instrument, \unoSynth, \dur,a=Pseq((1..9).sputter),\sustain,1/8/a,\degree,a,\detune,a)}
+            )
+        )
+    );
+    Ndef(\uno).play(vol:0.5);
+);
+    </code>
+
+    <link>http://dm.ruido.in/files/hp2015/hp2015_dmi_01.mp3</link> 
+    <invite>oscar_riveros</invite>
+	</hp>
+   <bio>
+      <bioCont>//En caso de que deseen tener una sección con breve biografía o algo del estilo, puede ir aquí.
+
+		Arquitecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus nec nisi finibus scelerisque. Duis vel nunc risus. Aenean et nulla sed nisl aliquam cursus. Curabitur ac lacus elementum, molestie justo ullamcorper, suscipit eros. Donec ut dapibus purus, et consectetur mauris. Proin luctus rhoncus purus, ac tincidunt sem vulputate nec. Nullam non turpis euismod, malesuada magna a, ullamcorper arcu. Aliquam condimentum at sapien venenatis mattis. Vivamus viverra pulvinar ante quis fringilla. Cras eget vestibulum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec in nisl pretium, finibus nibh ut, rhoncus urna. Aliquam erat volutpat. Sed molestie, turpis a fermentum sodales, lorem nibh elementum diam, at auctor tellus est non nunc. Integer dapibus odio non feugiat pulvinar. Donec quis mattis nibh.</bioCont>
+   </bio>
+</hackpact>

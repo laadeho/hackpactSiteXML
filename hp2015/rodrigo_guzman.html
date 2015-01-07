@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Hackpact, 2015, Rodrigo Guzmán, SuperCollider" />
+<title>Hackpact 2015 SuperCollider by Rodrigo Guzmán.</title>
+<style type="text/css">
+body,td,th {
+	color: #999;
+	font-family: Verdana;
+	font-size: 11px;
+}
+body {
+	background-color: #000;
+}
+h1 {
+	font-size: 16px;
+	color: #FFF;
+}
+h2 {
+	font-size: 14px;
+	color: #CCC;
+}
+a:link {
+	color: #666;
+	text-decoration: none;
+}
+a:visited {
+	color: #666;
+	text-decoration: none;
+}
+a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+a:active {
+	color: #666;
+	text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<table width="100%" border="0">
+  <tr>
+    <td><table width="800" border="0" align="center">
+      <tr>
+        <td align="right" valign="middle">
+          <h1><a href="../hackpact2015.html" target="_self">HACKPACT 2015</a></h1>
+          <h2>rodrigo guzmán - SuperCollider</h2>
+          <p>&nbsp;</p></td>
+        </tr>
+      <tr>
+        <td align="right"><table width="800" border="0">
+          <tr>
+            <td>
+			<script type="text/javascript">
+            var d = new Date();
+            var dia = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
+            var mes = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            document.write(dia[d.getDay()],' ', d.getDate(),' de ',mes[d.getMonth()],' de ',d.getFullYear());
+            </script></td>
+            <td width="25" align="center"><a href="#hp01">1</a></td>
+            <td width="25" align="center"><a href="#hp02">2</a></td>
+            <td width="25" align="center"><a href="#hp03">3</a></td>
+            <td width="25" align="center"><a href="#hp04">4</a></td>
+            <td width="25" align="center"><a href="#hp05">5</a></td>
+            <td width="25" align="center"><a href="#hp06">6</a></td>
+            <td width="25" align="center"><a href="#hp07">7</a></td>
+            <td width="25" align="center"><a href="#hp08">8</a></td>
+            <td width="25" align="center"><a href="#hp09">9</a></td>
+            <td width="25" align="center"><a href="#hp10">10</a></td>
+            <td width="25" align="center"><a href="#hp11">11</a></td>
+            <td width="25" align="center"><a href="#hp12">12</a></td>
+            <td width="25" align="center"><a href="#hp13">13</a></td>
+            <td width="25" align="center"><a href="#hp14">14</a></td>
+            <td width="25" align="center"><a href="#hp15">15</a></td>
+          </tr>
+          </table></td>
+        </tr>
+      <tr>
+        <td>
+        <!-- INICIA -->
+                <!-- MUESTRA
+        <div id="hp15">
+        <table width="600" border="0">
+           <tr>
+            <td>&nbsp;</td>
+            <td align="left"><h2>Día 00</h2></td>
+          </tr>
+          <tr>
+            <td width="150" valign="top">
+            	<audio controls>
+           	 	<source src="hp2015/0.mp3" type="audio/mpeg">
+            	Your browser does not support the audio element.
+            	</audio>
+                </td>
+            <td width="600"><p>&nbsp;</p></td>
+          </tr>
+        </table>
+        </div>
+        <br />
+        -->
+        <!-- TERMINA -->        
+        <div id="hp01">
+        <table width="600" border="0">
+           <tr>
+            <td>&nbsp;</td>
+            <td align="left"><h2>Día 02</h2></td>
+          </tr>
+          <tr>
+            <td width="150" valign="top"><p>&nbsp;</p>
+              <p>&nbsp;</p></td>
+            <td width="600"><p>/*<br />
+              Rodrigo Guzmán<br />
+              Hackpact 01 2015<br />
+              */<br />
+            </p>
+              <p>({ var freq, trig, seq;<br />
+                trig = Impulse.kr(0.5);<br />
+                seq = Dseq([32,32,32,32,34,34,34,34,36,36,36,36,39,39].mirror, inf).midicps;<br />
+                freq = Demand.kr(trig, 0, seq);<br />
+                VarSaw.ar(<br />
+                LFPulse.kr(SinOsc.kr(0.5,0.1,0.9), 0.5, 1.9, freq,1.5),<br />
+                0,LFTri.kr(0.3).range(0,1),0.1)!2<br />
+                }.play;<br />
+                )</p></td>
+          </tr>
+        </table>
+        </div>
+        <br /><!-- TERMINA -->
+        <div id="hp01">
+        <table width="600" border="0">
+           <tr>
+            <td>&nbsp;</td>
+            <td align="left"><h2>Día 01</h2></td>
+          </tr>
+          <tr>
+            <td width="150" valign="top"><p>&nbsp;</p>
+              <p>&nbsp;</p></td>
+            <td width="600"><p>/*<br />
+              Rodrigo Guzmán<br />
+              Hackpact 01 2015<br />
+              */<br />
+            </p>
+              <p>{Blip.ar(SinOsc.kr(111,60,30),SinOsc.kr(0.2,9,60),0.5)!2}.play</p></td>
+          </tr>
+        </table>
+        </div>
+        <br /><!-- TERMINA -->
+
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>
