@@ -1,0 +1,39 @@
+body, td, th {
+	color: #999;
+	font-family: Verdana;
+	font-size: 11px;
+}
+
+body {
+	background-color: #000;
+}
+
+h1 {
+	font-size: 16px;
+	color: #FFF;
+}
+
+h2 {
+	font-size: 14px;
+	color: #CCC;
+}
+
+a:link {
+	color: #666;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #666;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #666;
+	text-decoration: none;
+}
