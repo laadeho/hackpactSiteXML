@@ -1,146 +1,77 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/hp15_usr.dwt" codeOutsideHTMLIsLocked="false" -->
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- InstanceBeginEditable name="doctitle" -->
-<meta name="Keywords" content="Hackpact, 2015, SuperCollider" />
-<title>Hackpact 2015 SuperCollider by Fabrizio Durant</title>
-<!-- InstanceEndEditable -->
-<style type="text/css">
-body,td,th {
-	color: #999;
-	font-family: Verdana;
-	font-size: 11px;
-}
-body {
-	background-color: #000;
-}
-h1 {
-	font-size: 16px;
-	color: #FFF;
-}
-h2 {
-	font-size: 14px;
-	color: #CCC;
-}
-a:link {
-	color: #666;
-	text-decoration: none;
-}
-a:visited {
-	color: #666;
-	text-decoration: none;
-}
-a:hover {
-	color: #FFF;
-	text-decoration: underline;
-}
-a:active {
-	color: #666;
-	text-decoration: none;
-}
-</style>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
-</head>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-<body>
-<table width="100%" border="0">
-  <tr>
-    <td><table width="800" border="0" align="center">
-      <tr>
-        <td align="right" valign="middle">
-          <h1><a href="../hackpact2015.html" target="_self">HACKPACT 2015</a></h1>
-          <h2><!-- InstanceBeginEditable name="Nombre de Usuario" -->
-                Fabrizio Durant
-          <!-- InstanceEndEditable --> - SuperCollider</h2>			
-          <p>&nbsp;</p></td>
-        </tr>
-      <tr>
-        <td align="right"><table width="800" border="0">
-          <tr>
-            <td>
-			<script type="text/javascript">
-            var d = new Date();
-            var dia = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
-            var mes = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-            document.write(dia[d.getDay()],' ', d.getDate(),' de ',mes[d.getMonth()],' de ',d.getFullYear());
-            </script></td>
-            <td width="25" align="center"><a href="#hp01">1</a></td>
-            <td width="25" align="center"><a href="#hp02">2</a></td>
-            <td width="25" align="center"><a href="#hp03">3</a></td>
-            <td width="25" align="center"><a href="#hp04">4</a></td>
-            <td width="25" align="center"><a href="#hp05">5</a></td>
-            <td width="25" align="center"><a href="#hp06">6</a></td>
-            <td width="25" align="center"><a href="#hp07">7</a></td>
-            <td width="25" align="center"><a href="#hp08">8</a></td>
-            <td width="25" align="center"><a href="#hp09">9</a></td>
-            <td width="25" align="center"><a href="#hp10">10</a></td>
-            <td width="25" align="center"><a href="#hp11">11</a></td>
-            <td width="25" align="center"><a href="#hp12">12</a></td>
-            <td width="25" align="center"><a href="#hp13">13</a></td>
-            <td width="25" align="center"><a href="#hp14">14</a></td>
-            <td width="25" align="center"><a href="#hp15">15</a></td>
-          </tr>
-          </table></td>
-        </tr>
-      <tr>
-        <td>
-        <!-- INICIA -->
-        <br />
-        <br />
-        <table width="800" border="0">
-        <!-- InstanceBeginEditable name="EditRegion1" -->
-					<script>
-                    if (window.XMLHttpRequest)
-                      {// code for IE7+, Firefox, Chrome, Opera, Safari
-                      xmlhttp=new XMLHttpRequest();
-                      }
-                    else
-                      {// code for IE6, IE5
-                      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                      }
-                    xmlhttp.open("GET","fabrizio_durant.xml",false);
-                    xmlhttp.send();
-                    xmlDoc=xmlhttp.responseXML;
-                    var x=xmlDoc.getElementsByTagName("hp");
-                    for (i=0;i<x.length;i++)
-                      {
-						  document.write("<div id=hp");
-						  document.write(x[i].getElementsByTagName("number")[0].childNodes[0].nodeValue);
-						  document.write(">");
-						  document.write("<table width=800 border=0>");
-						  document.write("<tr><td width=200></td><td align=left width=600><h2>Día ");
-						  document.write(x[i].getElementsByTagName("number")[0].childNodes[0].nodeValue);
-						  document.write("</h2>");
-						  document.write("<p>invitado&#032;<a href=");
-						  document.write(x[i].getElementsByTagName("invite")[0].childNodes[0].nodeValue);
-						  document.write(".html>");
-						  document.write(x[i].getElementsByTagName("invite")[0].childNodes[0].nodeValue);
-						  document.write("</a></p></td></tr>");
-						  document.write("<tr><td width=200 valign=top>");
-						  /*
-						  document.write("&lt;iframe style=&quot;border: 0; width: 200px; height: 42px;&quot; src=&quot;https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/artwork=none/track=");
-						  document.write(x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue);
-						  document.write("/transparent=true/&quot; seamless&gt;&lt;a href=&quot;http://durant01.bandcamp.com/album/hackpact-2015&quot;&gt;Hackpact 2015 by Durant&lt;/a&gt;&lt;/iframe&gt;");
-						  */
-						  document.write("<iframe style=");
-						  document.write(x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue);
-						  document.write("</iframe>");
-//<iframe style="border: 0; width: 200px; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/artwork=none/track=124054011/transparent=true/" seamless><a href="http://durant01.bandcamp.com/album/hackpact-2015">Hackpact 2015 by Durant</a></iframe>
-						  document.write("</td><td width=600><p>");
-						  document.write(x[i].getElementsByTagName("code")[0].childNodes[0].nodeValue);
-						  document.write("</p></td></tr></table></div>");						
-                      }
-                    </script>
-                    <iframe style="border: 0; width: 200px; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/artwork=none/track=124054011/transparent=true/" seamless></iframe>
-                <!-- InstanceEndEditable -->
-        </table>
-        <br /><!-- TERMINA -->
-        </td>
-      </tr>
-    </table></td>
-  </tr>
-</table>
-</body>
-<!-- InstanceEnd --></html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="Keywords" content="Hackpact, 2015, SuperCollider" />
+
+		<title>Hackpact 2015 SuperCollider by Fabrizio Durant.</title>
+
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!-- JAVASCRIPT -->
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="js/02.js"></script>
+	</head>
+
+	<body>
+		<table width="100%" border="0">
+			<tr>
+				<td><table width="800" border="0" align="center">
+
+					<tr>
+						<td align="right" valign="middle">
+							<h1><a href="../hackpact2015.html" target="_self">HACKPACT 2015</a></h1>
+							<h2>Fabrizio Durant - SuperCollider</h2>
+							<p>&nbsp;</p>
+						</td>
+					</tr>
+
+					<tr>
+						<td align="right">
+							<table width="800" border="0">
+								<tr>
+									<td id="fecha"></td>
+									<td width="25" align="center"><a href="#hp01">1</a></td>
+									<td width="25" align="center"><a href="#hp02">2</a></td>
+									<td width="25" align="center"><a href="#hp03">3</a></td>
+									<td width="25" align="center"><a href="#hp04">4</a></td>
+									<td width="25" align="center"><a href="#hp05">5</a></td>
+									<td width="25" align="center"><a href="#hp06">6</a></td>
+									<td width="25" align="center"><a href="#hp07">7</a></td>
+									<td width="25" align="center"><a href="#hp08">8</a></td>
+									<td width="25" align="center"><a href="#hp09">9</a></td>
+									<td width="25" align="center"><a href="#hp10">10</a></td>
+									<td width="25" align="center"><a href="#hp11">11</a></td>
+									<td width="25" align="center"><a href="#hp12">12</a></td>
+									<td width="25" align="center"><a href="#hp13">13</a></td>
+									<td width="25" align="center"><a href="#hp14">14</a></td>
+									<td width="25" align="center"><a href="#hp15">15</a></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<br /><br />
+
+							<table width="800" border="0">
+								<tr>
+									<td>
+										<div class="contenido">
+											<cont></cont>
+										</div>
+									</td>
+								</tr>
+							</table>
+							<br />
+						</td>
+					</tr>
+
+				</table></td>
+			</tr>
+		</table>
+	</body>
+</html>

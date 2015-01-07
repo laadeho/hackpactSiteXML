@@ -13,7 +13,7 @@ $(document).ready(function() {
 	// Hacemos una peticion via ajax
 	$.ajax({
 		type: "GET",
-		url: "eduardo_obieta.xml",
+		url: "fabrizio_durant.xml",
 		dataType: "xml",
 		success: function(xml) {
 
@@ -52,9 +52,14 @@ $(document).ready(function() {
 				var tdAudio = document.createElement("td");
 				$(tdAudio).attr("width", "150");
 				$(tdAudio).attr("valign", "top");
-				$(tdAudio).html("<p><audio controls><source src='" + liga + "' type=audio/mpeg>Your browser does not support the audio element.</audio>");
+				$(tdAudio).html("<iframe style="+liga+"</iframe>");
 				$(secTr).append(tdAudio);
+/*
+<iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/track=3488866138/transparent=true/" seamless><a href="http://durant01.bandcamp.com/album/hackpact-2015">Hackpact 2015 by Durant</a></iframe>
+*/
+/*
 
+*/
 				var tdCode = document.createElement("td");
 				$(tdCode).attr("width", "600");
 				$(tdCode).html("<p>" + stylizeCode(codigo) + "</p>");

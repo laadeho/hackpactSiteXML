@@ -13,7 +13,7 @@ $(document).ready(function() {
 	// Hacemos una peticion via ajax
 	$.ajax({
 		type: "GET",
-		url: "eduardo_obieta.xml",
+		url: "diego_madero.xml",
 		dataType: "xml",
 		success: function(xml) {
 

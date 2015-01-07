@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hackpact>
 	<name>Fabrizio Durant</name>
+	<hp>
+		<number>03</number>
+		<code>
+			*/
+		 	Fabrizio Durant
+		 	Hackpact 2015
+			*/
+			{PanB2.ar(PinkNoise.ar(0.02,-0.2), SinOsc.kr(0.3,0))!2}.play;
+		</code>
+		<link>"border: 0; width: 170px; height: 170px;" src="https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/minimal=true/track=3488866138/transparent=true/" seamless></link>
+		<!--
+		<link>"border"border: 0; width: 200px; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/artwork=none/track=3488866138/transparent=true/" seamless></link>
+		-->
+		<invite> </invite>
+	</hp>
 	<hp> 
 		<number>02</number>
 		<code>
@@ -23,7 +38,7 @@
 			
 			s.stopRecording;
 		</code>
-		<link>&quot;border: 0; width: 200px; height: 42px;&quot; src=&quot;https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/artwork=none/track=1453165859/transparent=true/&quot; seamless></link> 
+		<link>"border: 0; width: 170px; height: 170px;" src="https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/minimal=true/track=1453165859/transparent=true/" seamless></link> 
 		<invite> </invite>
 	</hp>
 	<hp> 
@@ -45,12 +60,9 @@
 			{(LFTri.ar([60,62,63,65,67,68,70,72].midicps,2,0.1)*SinOsc.kr(2,0,0.7,0.6)!2)*LFNoise1.kr}.play 
 			{Saw.ar(96)*EnvGen.kr(Env.perc(0.3,8))!2}.play
 		</code>
-		<link>&quot;border: 0; width: 200px; height: 42px;&quot; src=&quot;https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/artwork=none/track=3968769040/transparent=true/&quot; seamless></link>
+		<link>"border: 0; width: 170px; height: 170px;" src="https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/minimal=true/track=3968769040/transparent=true/" seamless></link>
 		<!--
-		1453165859
-		124054011
-		<iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/track=3968769040/transparent=true/" seamless><a href="http://durant01.bandcamp.com/album/hackpact-2015">Hackpact 2015 by Durant</a></iframe>
-		<iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/track=1453165859/transparent=true/" seamless><a href="http://durant01.bandcamp.com/album/hackpact-2015">Hackpact 2015 by Durant</a></iframe>
+		<link>"border"border: 0; width: 200px; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2846670823/size=small/bgcol=ffffff/linkcol=0687f5/artwork=none/track=124054011/transparent=true/" seamless></link>
 		-->
 		<invite>diego_madero</invite>
 	</hp>
