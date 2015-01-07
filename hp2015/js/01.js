@@ -21,15 +21,53 @@ $(document).ready(function() {
 			console.log(xml);
 
 			$(xml).find("hackpact hp").each(function() {
+
 				// Creamos la etiqueta cont
 				var contNode = document.createElement("cont");
+				
 				// otras variables
 				var numero = $(this).find("number").text();
 				var codigo = $(this).find("code").text();
 				var liga = $(this).find("link").text();
 				var invitado = $(this).find("invite").text();
-				
-				$(contNode).html('<div id=hp'+numero+'><table width="800" border="0"><tr><td>&nbsp;</td><td align="left"><h2>Día '+numero+'</h2><p>invitado '+invitado+'</p></td></tr><tr><td width="150" valign="top"><p><audio controls><source src="'+liga+'" type=audio/mpeg>Your browser does not support the audio element.</audio></td><td width="600"><p>'+codigo+'</p><p>'+liga+'</p></td></tr></table></div></br>');
+
+				// Creamos y configuramos el div
+				var divHp = document.createElement("div");
+				$(divHp).attr("id", "hp" + numero);
+
+				// Creamos y configuramos la tabla
+				var tableHp = document.createElement("table");
+				$(tableHp).attr("width", "800");
+				$(tableHp).attr("border", "0");
+
+				// Primer renglon
+				var firstTr = document.createElement("tr");
+				$(firstTr).html("<td>&nbsp;</td><td align='left'><h2>Día " + numero + "</h2><p>Invitado " + invitado + "</p></td>");
+
+				// Agregamos el primer renglon a la tabla
+				$(tableHp).append(firstTr);
+
+				// Segundo renglon
+				var secTr = document.createElement("tr");
+				var tdAudio = document.createElement("td");
+				$(tdAudio).attr("width", "150");
+				$(tdAudio).attr("valign", "top");
+				$(tdAudio).html("<p><audio controls><source src='" + liga + "' type=audio/mpeg>Your browser does not support the audio element.</audio>");
+				$(secTr).append(tdAudio);
+
+				var tdCode = document.createElement("td");
+				$(tdCode).attr("width", "600");
+				$(tdCode).html("<p>" + stylizeCode(codigo) + "</p><p>" + liga + "</p>");
+				$(secTr).append(tdCode);
+
+				// Agregamos el segundo renglon a la tabla
+				$(tableHp).append(secTr);
+
+				// Agregamos la tabla al div
+				$(divHp).append(tableHp)
+
+				// Agregamos el div al cont
+				$(contNode).append(divHp);
 				
 				// Agregamos contNode a contenido
 				$(".contenido").append(contNode);
@@ -48,4 +86,17 @@ function getFecha () {
 	var dia = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
 	var mes = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 	return dia[d.getDay()] + ' ' + d.getDate() + ' de ' + mes[d.getMonth()] + ' de ' + d.getFullYear();
+}
+
+function stylizeCode (codeStr) {
+
+	// Hacemos una copia del string
+	var stylizedCode = codeStr;
+
+	// Convertimos todos los saltos de linea en br
+	while(stylizedCode.lastIndexOf("\n") != -1) {
+		stylizedCode = stylizedCode.replace("\n", "<br>");
+	}
+
+	return stylizedCode;
 }
