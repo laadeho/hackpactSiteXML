@@ -1,232 +1,77 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Hackpact, 2015, Libertad Figueroa, SuperCollider" />
-<title>Hackpact 2015 SuperCollider by Libertad Figueroa.</title>
-<style type="text/css">
-body,td,th {
-	color: #999;
-	font-family: Verdana;
-	font-size: 11px;
-}
-body {
-	background-color: #000;
-}
-h1 {
-	font-size: 16px;
-	color: #FFF;
-}
-h2 {
-	font-size: 14px;
-	color: #CCC;
-}
-a:link {
-	color: #666;
-	text-decoration: none;
-}
-a:visited {
-	color: #666;
-	text-decoration: none;
-}
-a:hover {
-	color: #FFF;
-	text-decoration: underline;
-}
-a:active {
-	color: #666;
-	text-decoration: none;
-}
-</style>
-</head>
 
-<body>
-<table width="100%" border="0">
-  <tr>
-    <td><table width="800" border="0" align="center">
-      <tr>
-        <td align="right" valign="middle">
-          <h1><a href="../hackpact2015.html" target="_self">HACKPACT 2015</a></h1>
-          <h2>libertad figueroa - SuperCollider</h2>
-          <p>&nbsp;</p></td>
-        </tr>
-      <tr>
-        <td align="right"><table width="800" border="0">
-          <tr>
-            <td>
-			<script type="text/javascript">
-            var d = new Date();
-            var dia = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
-            var mes = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-            document.write(dia[d.getDay()],' ', d.getDate(),' de ',mes[d.getMonth()],' de ',d.getFullYear());
-            </script></td>
-            <td width="25" align="center"><a href="#hp01">1</a></td>
-            <td width="25" align="center"><a href="#hp02">2</a></td>
-            <td width="25" align="center"><a href="#hp03">3</a></td>
-            <td width="25" align="center"><a href="#hp04">4</a></td>
-            <td width="25" align="center"><a href="#hp05">5</a></td>
-            <td width="25" align="center"><a href="#hp06">6</a></td>
-            <td width="25" align="center"><a href="#hp07">7</a></td>
-            <td width="25" align="center"><a href="#hp08">8</a></td>
-            <td width="25" align="center"><a href="#hp09">9</a></td>
-            <td width="25" align="center"><a href="#hp10">10</a></td>
-            <td width="25" align="center"><a href="#hp11">11</a></td>
-            <td width="25" align="center"><a href="#hp12">12</a></td>
-            <td width="25" align="center"><a href="#hp13">13</a></td>
-            <td width="25" align="center"><a href="#hp14">14</a></td>
-            <td width="25" align="center"><a href="#hp15">15</a></td>
-          </tr>
-          </table></td>
-        </tr>
-      <tr>
-        <td>
-        <!-- INICIA -->
-                <!-- MUESTRA
-        <div id="hp15">
-        <table width="600" border="0">
-           <tr>
-            <td>&nbsp;</td>
-            <td align="left"><h2>Día 00</h2></td>
-          </tr>
-          <tr>
-            <td width="150" valign="top">
-                </td>
-            <td width="600"><p>&nbsp;</p></td>
-          </tr>
-        </table>
-        </div>
-        <br />
-        -->
-        <!-- TERMINA --> 
-        <!-- INICIA -->
-        <div id="hp04">
-        <table width="800" border="0">
-           <tr>
-            <td>&nbsp;</td>
-            <td align="left"><h2>Día 04</h2>
-              <p>invitado-katya alvarez</p></td>
-          </tr>
-          <tr>
-            <td width="150" valign="top">
-                </td>
-            <td width="600"><p>s.boot;</p>
-              <p>                (<br />
-                (SynthDef(\sindef,{|out=0,gate=1|<br />
-                var sen,env,ruido;<br />
-                ruido=Blip.ar(LFDNoise3.ar(32),XLine.kr(880,220),Rand(1,8));<br />
-                sen=Pan2.ar(ruido,0,1);<br />
-                env=EnvGen.kr(Env.perc(0.5,8),gate,doneAction:2);<br />
-                Out.ar(out,sen+env)}).send(s));<br />
-                )</p>
-              <p>                (Tdef(\uno,{<br />
-                inf.do{<br />
-                4.do{Synth(\sindef);<br />
-                8.wait};<br />
-                }});<br />
-                )</p>
-              <p>                Tdef(\uno).play;<br />
-                Tdef(\uno).stop;</p>
-                <p><iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184539790&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe></p>
-              </td>
-          </tr>
-        </table>
-        </div>
-        <br /><!-- TERMINA -->             
-         <!-- INICIA -->  
-        <div id="hp03">
-        <table width="800" border="0">
-           <tr>
-            <td>&nbsp;</td>
-            <td align="left"><h2>Día 03</h2>
-              <p>invitado-juan a. romero</p></td>
-          </tr>
-          <tr>
-            <td width="150" valign="top">
-                </td>
-            <td width="600"><p>s.boot;</p>
-              <p>(Ndef(\uno).fadeTime=1;<br />
-                Ndef(\uno)[0]={|amp=1|<br />
-                Pan2.ar(Ringz.ar(Blip.ar(XLine.kr(80,0.1,40), 0,amp),[220,440,880]))*LFNoise1.ar(2)}<br />
-                )<br />
-                (Ndef(\uno);<br />
-                Pbind(<br />
-                \amp,Pxrand([0.5,0.4,0.6,0.9],inf);)<br />
-                )<br />
-                Ndef(\uno).play;<br />
-                Ndef(\uno).rebuild;<br />
-                Ndef(\uno).release(4)</p>
-                <p>*Audífonos y buen volumen recomendados.</p>
-                <p><iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184394007&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe></p>
-              </td>
-          </tr>
-        </table>
-        </div>
-        <br /><!-- TERMINA -->             
-         <!-- INICIA -->
-        <div id="hp02">
-        <table width="800" border="0">
-           <tr>
-            <td>&nbsp;</td>
-            <td align="left"><h2>Día 02</h2>
-              <p>invitado-<a href="hugo_morales.html" target="_self">hugo morales</a></p></td>
-          </tr>
-          <tr>
-            <td width="150" valign="top">
-                </td>
-            <td width="600"><p>s.boot;</p>
-              <p>(<br />
-                (SynthDef(\son,{|out=0,gate=1,en=0.3|<br />
-                var pan,s1,env;<br />
-                pan=Pan2.ar(SinOscFB.ar(Rand(110.0,1000.0), 0.1,0.2)*LFNoise0.kr(0.1),0.4);<br />
-                s1=SinOsc.ar([20,23,27,31].midicps,0,0.6)*Blip.kr( Line.kr(80,0.1,0.8),0.8);<br />
-                env=EnvGen.kr(Env.perc(0.2,1),gate,doneAction:2);<br />
-                Out.ar(out,pan*s1*env)}).send(s));<br />
-                )<br />
-                (Tdef(\uno,<br />
-                {inf.do<br />
-                {Synth<br />
-                (\son,<br />
-                [\en,rrand(1,16)]);<br />
-                0.1.wait}<br />
-                }))<br />
-                Tdef(\uno).play;<br />
-                Tdef(\uno).stop;
-              </p>
-              <p><iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184254167&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe></p></td>
-          </tr>
-        </table>
-        </div>
-        <br />
-        <!-- TERMINA -->        
-        <div id="hp01">
-        <table width="800" border="0">
-           <tr>
-            <td>&nbsp;</td>
-            <td align="left"><h2>Día 01</h2>
-              <p>invitado-alexandra cárdenas</p></td>
-          </tr>
-          <tr>
-            <td width="150" valign="top"><p>&nbsp;</p>
-              <p>&nbsp;</p></td>
-            <td width="600"><p>/*<br />
-              Libertad Figueroa<br />
-              Hackpact 01 2015<br />
-              */</p>
-              <p><br />
-                s.boot;<br />
-                Ndef(\uno, {(a=LFPar; SinOsc.ar(0,a.ar([110,220,440,880],0,LFNoise1.ar(1) )*a.ar(CombN.ar(a.ar(0.5))*2.2)*2pi))})<br />
-                Ndef(\uno).play<br />
-                Ndef(\uno).release(2)</p>
-              <p><iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184092020&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe></p></td>
-          </tr>
-        </table>
-        </div>
-        <br /><!-- TERMINA -->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="Keywords" content="Hackpact, 2015, SuperCollider" />
 
-        </td>
-      </tr>
-    </table></td>
-  </tr>
-</table>
-</body>
+		<title>Hackpact 2015 SuperCollider by Libertad Figueroa.</title>
+
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!-- JAVASCRIPT -->
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="js/04.js"></script>
+	</head>
+
+	<body>
+		<table width="100%" border="0">
+			<tr>
+				<td><table width="800" border="0" align="center">
+
+					<tr>
+						<td align="right" valign="middle">
+							<h1><a href="../hackpact2015.html" target="_self">HACKPACT 2015</a></h1>
+							<h2>Libertad Figueroa- SuperCollider</h2>
+							<p>&nbsp;</p>
+						</td>
+					</tr>
+
+					<tr>
+						<td align="right">
+							<table width="800" border="0">
+								<tr>
+									<td id="fecha"></td>
+									<td width="25" align="center"><a href="#hp01">1</a></td>
+									<td width="25" align="center"><a href="#hp02">2</a></td>
+									<td width="25" align="center"><a href="#hp03">3</a></td>
+									<td width="25" align="center"><a href="#hp04">4</a></td>
+									<td width="25" align="center"><a href="#hp05">5</a></td>
+									<td width="25" align="center"><a href="#hp06">6</a></td>
+									<td width="25" align="center"><a href="#hp07">7</a></td>
+									<td width="25" align="center"><a href="#hp08">8</a></td>
+									<td width="25" align="center"><a href="#hp09">9</a></td>
+									<td width="25" align="center"><a href="#hp10">10</a></td>
+									<td width="25" align="center"><a href="#hp11">11</a></td>
+									<td width="25" align="center"><a href="#hp12">12</a></td>
+									<td width="25" align="center"><a href="#hp13">13</a></td>
+									<td width="25" align="center"><a href="#hp14">14</a></td>
+									<td width="25" align="center"><a href="#hp15">15</a></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<br /><br />
+
+							<table width="800" border="0">
+								<tr>
+									<td>
+										<div class="contenido">
+											<cont></cont>
+										</div>
+									</td>
+								</tr>
+							</table>
+							<br />
+						</td>
+					</tr>
+
+				</table></td>
+			</tr>
+		</table>
+	</body>
 </html>

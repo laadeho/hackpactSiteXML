@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hackpact type="array">
+   <name>Libertad Figueroa</name>
+   <hp>
+		<number>06</number>
+		<code>
+		
+		s.boot;
+		(
+		Ndef(\tres);
+		Ndef(\tres)[0]={
+		Pan2.ar(LFTri.ar(LFTri.kr((LFNoise2.kr(Rand(1,1760))),0,0.8))*SinOsc.ar((LFTri.kr(440)),0,0.4)*2.2pi)};
+		)
+		Ndef(\tres).play;
+		Ndef(\tres).rebuild;
+		Ndef(\tres).release(2);
+		
+		</code>
+		<link>width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184863760&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></link>
+		<invite>rene_alcocer</invite>
+	</hp>
+	<hp>
+		<number>05</number>
+		<code>
+		
+			s.boot;
+			(
+			(SynthDef(\sindef,{|out=0,gate=1,en=0.24|
+			var pan,s1,env;
+			pan=Pan2.ar(SinOsc.ar(LFPar.kr(Rand(110,1880),0,0.4),0,0.4),LFDNoise3.kr(110,1,0),0.4);
+			s1=LFTri.ar(110,0,0.8)&lt;LFClipNoise.kr(Line.kr(40,0.1,Rand(0.1,1)),1);
+			env=EnvGen.kr(Env.perc(0.12,0.2),gate,doneAction:2);
+			Out.ar(out,pan*s1*env)}).send(s));
+			)
+			(Tdef(\uno,{
+			inf.do{Synth(\sindef,[\en, rrand(1,16)]);
+			0.2.wait}
+			})
+			)
+			Tdef(\uno).play;
+			Tdef(\uno).stop;
+		
+		</code>
+		<link>width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184863289&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></link>
+		<invite>emilio_ocelotl</invite>
+	</hp>
+
+   <hp>
+      <number>04</number>
+      <code>
+      		s.boot;
+
+(
+(SynthDef(\sindef,{|out=0,gate=1|
+var sen,env,ruido;
+ruido=Blip.ar(LFDNoise3.ar(32),XLine.kr(880,220),Rand(1,8));
+sen=Pan2.ar(ruido,0,1);
+env=EnvGen.kr(Env.perc(0.5,8),gate,doneAction:2);
+Out.ar(out,sen+env)}).send(s));
+)
+
+(Tdef(\uno,{
+inf.do{
+4.do{Synth(\sindef);
+8.wait};
+}});
+)
+
+Tdef(\uno).play;
+Tdef(\uno).stop;
+		</code>
+      <link>width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184539790&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></link>
+      <invite>katya_alvarez</invite>
+   </hp>
+   <hp>
+      <number>03</number>
+      <code>
+		s.boot;
+
+(Ndef(\uno).fadeTime=1;
+Ndef(\uno)[0]={|amp=1|
+Pan2.ar(Ringz.ar(Blip.ar(XLine.kr(80,0.1,40), 0,amp),[220,440,880]))*LFNoise1.ar(2)}
+)
+(Ndef(\uno);
+Pbind(
+\amp,Pxrand([0.5,0.4,0.6,0.9],inf);)
+)
+Ndef(\uno).play;
+Ndef(\uno).rebuild;
+Ndef(\uno).release(4)
+
+*Audífonos y buen volumen recomendados.
+</code>
+      <link>width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184394007&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></link>
+      <invite>juan_a_romero</invite>
+   </hp>
+   <hp>
+      <number>02</number>
+      <code>
+		s.boot;
+
+(
+(SynthDef(\son,{|out=0,gate=1,en=0.3|
+var pan,s1,env;
+pan=Pan2.ar(SinOscFB.ar(Rand(110.0,1000.0), 0.1,0.2)*LFNoise0.kr(0.1),0.4);
+s1=SinOsc.ar([20,23,27,31].midicps,0,0.6)*Blip.kr( Line.kr(80,0.1,0.8),0.8);
+env=EnvGen.kr(Env.perc(0.2,1),gate,doneAction:2);
+Out.ar(out,pan*s1*env)}).send(s));
+)
+(Tdef(\uno,
+{inf.do
+{Synth
+(\son,
+[\en,rrand(1,16)]);
+0.1.wait}
+}))
+Tdef(\uno).play;
+Tdef(\uno).stop; 
+</code>
+      <link>width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184254167&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></link>
+      <invite>hugo_morales</invite>
+   </hp>
+   <hp>
+      <number>01</number>
+      <code>
+		/*
+			Libertad Figueroa
+			Hackpact 01 2015
+			*/
+			
+			
+			s.boot;
+			Ndef(\uno, {(a=LFPar; SinOsc.ar(0,a.ar([110,220,440,880],0,LFNoise1.ar(1) )*a.ar(CombN.ar(a.ar(0.5))*2.2)*2pi))})
+			Ndef(\uno).play
+			Ndef(\uno).release(2)
+		</code>
+      <link>width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184092020&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></link>
+      <invite>alexandra_cardenas</invite>
+   </hp>
+   <bio>
+      <bioCont>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus nec nisi finibus scelerisque. Duis vel nunc risus. Aenean et nulla sed nisl aliquam cursus. Curabitur ac lacus elementum, molestie justo ullamcorper, suscipit eros. Donec ut dapibus purus, et consectetur mauris. Proin luctus rhoncus purus, ac tincidunt sem vulputate nec. Nullam non turpis euismod, malesuada magna a, ullamcorper arcu. Aliquam condimentum at sapien venenatis mattis. Vivamus viverra pulvinar ante quis fringilla. Cras eget vestibulum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec in nisl pretium, finibus nibh ut, rhoncus urna. Aliquam erat volutpat. Sed molestie, turpis a fermentum sodales, lorem nibh elementum diam, at auctor tellus est non nunc. Integer dapibus odio non feugiat pulvinar. Donec quis mattis nibh.</bioCont>
+   </bio>
+</hackpact>

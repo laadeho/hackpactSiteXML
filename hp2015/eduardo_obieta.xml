@@ -2,6 +2,62 @@
 <hackpact type="array">
    <name>Eduardo H Obieta</name>
    <hp>
+      <number>07</number>
+      <code>
+			/*
+			Eduardo H Obieta
+			Hackpact 07 2015
+			*/
+			s.boot;
+			s.meter;
+			s.prepareForRecord;
+			s.record;
+
+			a={Silent.ar(2)}.play
+			a.free;
+
+			s.stopRecording;
+		</code>
+      <link>eho/07_15.07.mp3</link>
+      <invite>alejandro_franco</invite>
+   </hp>
+   <hp>
+      <number>06</number>
+      <code>
+			/*
+			Eduardo H Obieta
+			Hackpact 06 2015
+			*/
+			s.boot;
+			s.meter;
+			s.prepareForRecord;
+			s.record;
+
+			a={a=SinOsc;b=a.kr(0.1,0,0.3,0.7);c=Saw;(Gendy3.ar(5, a.kr(1,0,0.5,0.5),b,b,200*b+50*b)*( Impulse.kr(4+a.kr(0.1,0,5,10),0.3)*a.kr(1,0,0.5,0.5)))!2}.play
+			a.free
+			s.stopRecording;
+		</code>
+      <link>eho/06_15.06.mp3</link>
+      <invite>diego_montesinos</invite>
+   </hp>
+   <hp>
+      <number>05</number>
+      <code>
+			/*
+			Eduardo H Obieta
+			Hackpact 05 2015
+			*/
+			s.boot;
+			s.meter;
+			s.prepareForRecord;
+			s.record;
+			{a=Gendy1 ;b=LFPar; c=LFNoise0;a.ar(1,c.kr(0.2,0,0.1,0.1),1, 1,b.kr(0.1,0,180,200))* b.ar([80,100]+b.kr(5,0,10,10),c.kr(150),0.4,0)}.scope
+			s.stopRecording;
+		</code>
+      <link>eho/05_15.05.mp3</link>
+      <invite>jose_carlos_hasbun</invite>
+   </hp>
+   <hp>
       <number>04</number>
       <code>
       		/* 
